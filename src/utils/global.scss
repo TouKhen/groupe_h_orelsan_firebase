@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.date-form {
+    background: #1e1e1e;
+    color: #fcfcfc;
+    padding: 1rem;
+}
+
+input {
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+}
+
+.date-list {
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+    padding-inline: 2rem;
+
+    li {
+        padding-block: 1rem;
+
+        div {
+            display: flex;
+
+            .remove-btn {
+                margin-left: 1rem;
+            }
+        }
+    }
+    li:not(:last-child) {
+        border-bottom: 1px solid #1e1e1e;
+    }
+}

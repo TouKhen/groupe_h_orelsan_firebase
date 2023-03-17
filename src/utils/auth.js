@@ -55,37 +55,6 @@ const authService = {
         });
     });
   },
-  signUp(email, pwd) {
-    return new Promise((resolve) => {
-      const auth = getAuth();
-      createUserWithEmailAndPassword(auth, email, pwd)
-        .then((userCredential) => {
-          // Signed in
-          const user = userCredential.user;
-          resolve({ data: user });
-        })
-        .catch((error) => {
-          let frenchMessage;
-          switch (error.code) {
-            case "auth/invalid-email":
-              frenchMessage = "Adresse mail mal formatée";
-              break;
-            case "auth/weak-password":
-              frenchMessage =
-                "Votre mot de passe doit contenir minimum 6 caractères";
-              break;
-            case "auth/email-already-in-use":
-              frenchMessage = "Cette adresse mail est déjà utilisée";
-              break;
-            default:
-              frenchMessage =
-                "Une erreur inconnue est survenue ! Code de l'erreur : " +
-                error.code;
-          }
-          resolve({ error: { ...error, frenchMessage } });
-        });
-    });
-  },
   login(email, pwd) {
     return new Promise((resolve) => {
       const auth = getAuth();
@@ -96,6 +65,8 @@ const authService = {
               // Signed in
               const user = userCredential.user;
               resolve({ data: user });
+              console.log("logged in");
+              window.location.href = "/backoffice";
             })
             .catch((error) => {
               let frenchMessage;

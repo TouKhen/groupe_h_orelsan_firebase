@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import databaseService from "../utils/database";
 
 const BackOffice = () => {
+  if (localStorage.getItem("UserCreds") === null) {
+    window.location.href = "/login";
+  }
   let dates = [];
   const [getDates, setDates] = useState(dates);
 
@@ -14,8 +17,9 @@ const BackOffice = () => {
         for (let i = 0; i < Object.keys(data).length; i++) {
           dateArray.push({
             id: Object.keys(data)[i],
-            city: Object.values(data)[i].city,
+            ville: Object.values(data)[i].ville,
             date: Object.values(data)[i].date,
+            lieu: Object.values(data)[i].lieu,
           });
         }
 
@@ -27,14 +31,16 @@ const BackOffice = () => {
   const addDate = (event) => {
     event.preventDefault();
     let date = event.target.children.date.value;
-    let city = event.target.children.ville.value;
+    let ville = event.target.children.ville.value;
+    let lieu = event.target.children.lieu.value;
 
     const data = {
-      city: city,
+      ville: ville,
       date: date,
+      lieu: lieu,
     };
 
-    if (date !== "" && city !== "") {
+    if (date !== "" && ville !== "") {
       databaseService.pushData("dates/", data);
     }
   };
@@ -47,11 +53,13 @@ const BackOffice = () => {
     event.preventDefault();
     let id = event.target.children.id.value;
     let date = event.target.children.date.value;
-    let city = event.target.children.ville.value;
+    let ville = event.target.children.ville.value;
+    let lieu = event.target.children.lieu.value;
 
     const data = {
-      city: city,
+      ville: ville,
       date: date,
+      lieu: lieu,
     };
 
     databaseService.updateData(`dates/${id}`, data);
@@ -59,12 +67,12 @@ const BackOffice = () => {
 
   return (
     <div>
-      <form onSubmit={addDate}>
+      <form onSubmit={addDate} className="date-form">
         <p>Ajouter une date de tournée :</p>
         <label htmlFor="date">Date :</label>
         <input type="date" name="date" id="date" />
 
-        <label htmlFor="ville">Lieu du concert :</label>
+        <label htmlFor="ville">Ville du concert :</label>
         <input
           type="text"
           name="ville"
@@ -72,14 +80,22 @@ const BackOffice = () => {
           placeholder="Ville du concert"
         />
 
+        <label htmlFor="lieu">Lieu du concert :</label>
+        <input
+          type="text"
+          name="lieu"
+          id="lieu"
+          placeholder="Lieu du concert"
+        />
+
         <button>Ajouter</button>
       </form>
 
-      <ul>
+      <ul className="date-list">
         {getDates.map((date) => (
           <li key={date.id}>
             <p>
-              {date.date} à {date.city}
+              {date.date} à {date.ville} | {date.lieu}
             </p>
             <div>
               <form onSubmit={editDate}>
@@ -97,15 +113,29 @@ const BackOffice = () => {
                   name="ville"
                   id="editVille"
                   placeholder="Ville du concert"
-                  defaultValue={date.city}
+                  defaultValue={date.ville}
+                />
+
+                <label htmlFor="editLieu">Lieu du concert :</label>
+                <input
+                  type="text"
+                  name="lieu"
+                  id="editLieu"
+                  placeholder="Lieu du concert"
+                  defaultValue={date.lieu}
                 />
 
                 <input type="hidden" name="id" value={date.id} />
 
                 <button>Edit</button>
               </form>
+              <button
+                className="remove-btn"
+                onClick={() => removeDate(date.id)}
+              >
+                Remove
+              </button>
             </div>
-            <button onClick={() => removeDate(date.id)}>Remove</button>
           </li>
         ))}
       </ul>
