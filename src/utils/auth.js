@@ -5,8 +5,6 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
-  updateEmail,
-  updatePassword,
   signOut,
 } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
@@ -27,31 +25,34 @@ const authService = {
     const auth = getAuth();
     onAuthStateChanged(auth, callback);
   },
-  updateUserEmail(newEmail) {
+  signUp(email, pwd) {
     return new Promise((resolve) => {
       const auth = getAuth();
-      updateEmail(auth.currentUser, newEmail)
-        .then((result) => {
-          // Email updated!
-          resolve({ data: result });
+      createUserWithEmailAndPassword(auth, email, pwd)
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          resolve({ data: user });
         })
         .catch((error) => {
-          console.log(error);
-          resolve({ error });
-        });
-    });
-  },
-  updateUserPassword(newPassword) {
-    return new Promise((resolve) => {
-      const auth = getAuth();
-      updatePassword(auth.currentUser, newPassword)
-        .then((result) => {
-          // Password updated!
-          resolve({ data: result });
-        })
-        .catch((error) => {
-          console.log(error);
-          resolve({ error });
+          let frenchMessage;
+          switch (error.code) {
+            case "auth/invalid-email":
+              frenchMessage = "Adresse mail mal formatée";
+              break;
+            case "auth/weak-password":
+              frenchMessage =
+                "Votre mot de passe doit contenir minimum 6 caractères";
+              break;
+            case "auth/email-already-in-use":
+              frenchMessage = "Cette adresse mail est déjà utilisée";
+              break;
+            default:
+              frenchMessage =
+                "Une erreur inconnue est survenue ! Code de l'erreur : " +
+                error.code;
+          }
+          resolve({ error: { ...error, frenchMessage } });
         });
     });
   },

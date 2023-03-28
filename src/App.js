@@ -1,7 +1,7 @@
 import "./utils/global.css";
 import _ from "./utils/init.js";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home";
+import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login";
 import SignOut from "./Pages/SignOut";
 import BackOffice from "./Pages/BackOffice";

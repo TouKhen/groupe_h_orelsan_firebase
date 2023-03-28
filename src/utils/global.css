@@ -4,9 +4,15 @@
 
 body {
   margin: 0;
+  background-color: #101010;
+  color: white;
 }
 
-.date-form {
+.logo-svg {
+  width: 20rem;
+}
+
+.nav-form {
   background: #1e1e1e;
   color: #fcfcfc;
   padding: 1rem;
