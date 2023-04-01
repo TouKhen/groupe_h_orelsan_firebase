@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import databaseService from "../../utils/database";
-import logo from "./Logo Orelsan neon 5.svg";
-import logo2 from "./Logo Orelsan neon 4.svg";
-import spotifyApiFNC from "../../utils/spotifyApiFNC";
-import { Client } from "spotify-api.js";
+import Nav from "../../Components/Nav";
+import Overlay from "../../Components/Overlay";
+import "./Home.css";
+import video from "./video.mp4";
+import logo from "./logo_orelsan.svg";
+import { Link } from "react-router-dom";
+import Footer from "../../Components/Footer";
 
 const Home = () => {
   let dates = [],
@@ -32,46 +35,67 @@ const Home = () => {
         setDates(Object.values(dateArray));
       }
     });
-
-    // get all tracks from orelsan album civilization ultime via Spotify API
-    fetch("https://api.spotify.com/v1/albums/68YP0pEgwhnfRqQAzu71gP", {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization:
-          "Bearer BQA_88fHYjojhI99YJMWIwSePOsGYoQUSgo5aCSksxvXiVWpM4PNeamQY_bgjoeJTJte8Cy_IQRWENsyoSZlHFpchl4iOXMCeARRvpVp56Xe_LlZcQAU0ZmkKEguTh7PVwqLb5FC6mazf6Ka-05FDfsMdARU756W6_xSWFUSA8AX2mIWD7vg8mNTtYZjZo02FAQsOCkS68Q-",
-      },
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        setTracks(result.tracks.items);
-      });
   }, []);
-
-  const clientId = "b4de5e7905ac4579a4b4ebc88bd9f473";
-  const clientSecret = "383f9a60e6294067bdc2a63b2392bf71";
 
   return (
     <div>
-      <img className="logo-svg" src={logo} />
-      <img className="logo-svg" src={logo2} />
-      <p>hey</p>
+      <Nav />
+      <Overlay />
 
-      <ul className="date-list">
-        {getDates.map((date) => (
-          <li key={date.id}>
-            <p>
-              {date.date} à {date.ville} | {date.lieu}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <section className="video-container">
+        <div className="filter">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
+            blanditiis nesciunt fugit reiciendis quam voluptatum beatae placeat
+            debitis, ab autem enim harum quo esse odit officia ratione? Culpa,
+            nihil natus.
+          </p>
+        </div>
+        <video src={video} muted autoPlay loop></video>
+      </section>
 
-      <ul className="tracks-list">
-        {getTracks.map((track) => (
-          <li>{track.name}</li>
-        ))}
-      </ul>
+      <main>
+        <article className="tournees">
+          <h1>
+            <span>Tournée 2023</span>
+            <br /> <span>Orelsan Tour</span>
+          </h1>
+
+          <ul className="date-list">
+            {getDates.map((date) => (
+              <li key={date.id}>
+                <span className="date">{date.date}</span>{" "}
+                <span className="ville">{date.ville}</span>
+                <span className="img">
+                  <img src={logo} />
+                </span>
+                <span className="lieu">{date.lieu}</span>
+                <span className="lien">
+                  <Link to="#">Réserver</Link>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </article>
+
+        <article className="actus">
+          <h2>Dernières actualités</h2>
+
+          <section className="articles-list">
+            <article>
+              <Link to=""></Link>
+            </article>
+            <article>
+              <Link to=""></Link>
+            </article>
+            <article>
+              <Link to=""></Link>
+            </article>
+          </section>
+        </article>
+      </main>
+
+      <Footer />
     </div>
   );
 };

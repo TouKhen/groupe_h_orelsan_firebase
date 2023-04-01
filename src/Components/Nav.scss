@@ -1,0 +1,38 @@
+// COLORS
+
+$black: #000000;
+$white: #ffffff;
+$blue: #00c2ff;
+$yellow: #aca140;
+
+// NAV
+
+.main-header {
+    display: flex;
+
+    .navbar {
+        width: 100%;
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            padding: 1rem 6rem;
+            margin: 0;
+
+            li {
+                a {
+                    color: $white;
+                    font-size: 2.4rem;
+                    text-decoration: none;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    img {
+                        width: 15rem;
+                    }
+                }
+            }
+        }
+    }
+}

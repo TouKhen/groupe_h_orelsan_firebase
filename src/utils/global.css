@@ -1,43 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@200;400;500;600;700&display=swap");
+*:not(i) {
+  font-family: "Lexend", sans-serif;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   margin: 0;
-  background-color: #101010;
-  color: white;
-}
-
-.logo-svg {
-  width: 20rem;
-}
-
-.nav-form {
-  background: #1e1e1e;
-  color: #fcfcfc;
-  padding: 1rem;
-}
-
-input {
-  margin-right: 1rem;
-  margin-left: 0.5rem;
-}
-
-.date-list {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding-inline: 2rem;
-}
-.date-list li {
-  padding-block: 1rem;
-}
-.date-list li div {
-  display: flex;
-}
-.date-list li div .remove-btn {
-  margin-left: 1rem;
-}
-.date-list li:not(:last-child) {
-  border-bottom: 1px solid #1e1e1e;
+  background-color: #000000;
+  color: #ffffff;
 }/*# sourceMappingURL=global.css.map */

@@ -1,0 +1,52 @@
+.page-footer {
+  margin-top: 12rem;
+  padding-bottom: 4rem;
+  padding-inline: 8rem;
+}
+.page-footer > div:first-child {
+  display: flex;
+}
+.page-footer > div:first-child > div:first-child {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  border-right: 2px solid #a19d59;
+}
+.page-footer > div:first-child > div:first-child a {
+  width: 60%;
+}
+.page-footer > div:first-child > div:first-child a img {
+  width: 100%;
+}
+.page-footer > div:first-child > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+}
+.page-footer > div:first-child > div:last-child ul {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+.page-footer > div:first-child > div:last-child ul:first-child {
+  margin-bottom: 4rem;
+}
+.page-footer > div:first-child > div:last-child ul:first-child li a {
+  color: #fff;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+.page-footer > div:first-child > div:last-child ul:last-child li a {
+  color: #a19d59;
+  font-size: 5.4rem;
+}
+.page-footer > div:first-child > div:last-child ul li a {
+  text-decoration: none;
+}
+.page-footer .footer-copyright {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-top: 7rem;
+}/*# sourceMappingURL=Footer.css.map */

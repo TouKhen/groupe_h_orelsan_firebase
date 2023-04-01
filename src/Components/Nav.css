@@ -1,0 +1,25 @@
+.main-header {
+  display: flex;
+}
+.main-header .navbar {
+  width: 100%;
+}
+.main-header .navbar ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 1rem 6rem;
+  margin: 0;
+}
+.main-header .navbar ul li a {
+  color: #ffffff;
+  font-size: 2.4rem;
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.main-header .navbar ul li a img {
+  width: 15rem;
+}/*# sourceMappingURL=Nav.css.map */
