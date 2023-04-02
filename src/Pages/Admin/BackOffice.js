@@ -1,6 +1,10 @@
+import "./BackOffice.css";
 import { useEffect, useState } from "react";
 import databaseService from "../../utils/database";
 import authService from "../../utils/auth";
+import Nav from "../../Components/Nav";
+import Footer from "../../Components/Footer";
+import Overlay from "../../Components/Overlay";
 
 const BackOffice = () => {
   // check if user is connected else redirect to login page
@@ -97,126 +101,141 @@ const BackOffice = () => {
   };
 
   return (
-    <div>
-      <nav>
-        <form onSubmit={addUser} className="nav-form">
-          <p>Ajouter un collaborateur :</p>
-          <label htmlFor="email">Email :</label>
-          <input type="email" name="email" id="email" />
-
-          <label htmlFor="pwd">Mot de passe :</label>
-          <input
-            type="password"
-            name="pwd"
-            id="pwd"
-            placeholder="Mot de passe du collaborateur"
-          />
-          {pwdErrors}
-
-          <button>Ajouter</button>
-        </form>
-        <form onSubmit={addDate} className="nav-form">
-          <p>Ajouter une date de tournée :</p>
-          <label htmlFor="date">Date :</label>
-          <input type="date" name="date" id="date" />
-
-          <label htmlFor="ville">Ville du concert :</label>
-          <input
-            type="text"
-            name="ville"
-            id="ville"
-            placeholder="Ville du concert"
-          />
-
-          <label htmlFor="pays">Pays du concert :</label>
-          <input
-            type="text"
-            name="pays"
-            id="pays"
-            placeholder="Pays du concert"
-          />
-
-          <label htmlFor="lieu">Lieu du concert :</label>
-          <input
-            type="text"
-            name="lieu"
-            id="lieu"
-            placeholder="Lieu du concert"
-          />
-
-          <label htmlFor="complet">Le concert est-il pleint ?</label>
-          <input type="checkbox" name="complet" id="complet" />
-
-          <button>Ajouter</button>
-        </form>
-      </nav>
-
-      <ul className="date-list">
-        {getDates.map((date) => (
-          <li key={date.id}>
-            <p>
-              {date.date} à {date.ville} | {date.lieu}
-            </p>
+    <>
+      <Nav />
+      <Overlay />
+      <main className="page-backoffice">
+        <nav className="addForms">
+          <form onSubmit={addUser} className="nav-form">
+            <p>Ajouter un collaborateur</p>
             <div>
-              <form onSubmit={editDate}>
-                <label htmlFor="editDate">Date :</label>
-                <input
-                  type="date"
-                  name="date"
-                  id="editDate"
-                  defaultValue={date.date}
-                />
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email du collaborateur"
+              />
 
-                <label htmlFor="editVille">Lieu du concert :</label>
-                <input
-                  type="text"
-                  name="ville"
-                  id="editVille"
-                  placeholder="Ville du concert"
-                  defaultValue={date.ville}
-                />
-
-                <label htmlFor="editPays">Pays du concert :</label>
-                <input
-                  type="text"
-                  name="editPays"
-                  id="editPays"
-                  placeholder="Pays du concert"
-                  defaultValue={date.pays}
-                />
-
-                <label htmlFor="editLieu">Lieu du concert :</label>
-                <input
-                  type="text"
-                  name="lieu"
-                  id="editLieu"
-                  placeholder="Lieu du concert"
-                  defaultValue={date.lieu}
-                />
-
-                <label htmlFor="editComplet">Le concert est-il pleint ?</label>
-                <input
-                  type="checkbox"
-                  name="editComplet"
-                  id="editComplet"
-                  defaultValue={date.complet}
-                />
-
-                <input type="hidden" name="id" value={date.id} />
-
-                <button>Edit</button>
-              </form>
-              <button
-                className="remove-btn"
-                onClick={() => removeDate(date.id)}
-              >
-                Remove
-              </button>
+              <label htmlFor="pwd">Mot de passe</label>
+              <input
+                type="password"
+                name="pwd"
+                id="pwd"
+                placeholder="Mot de passe du collaborateur"
+              />
+              {pwdErrors}
             </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+
+            <button>Ajouter</button>
+          </form>
+          <form onSubmit={addDate} className="nav-form">
+            <p>Ajouter une date de tournée</p>
+            <div>
+              <label htmlFor="date">Date</label>
+              <input type="date" name="date" id="date" />
+
+              <label htmlFor="ville">Ville du concert</label>
+              <input
+                type="text"
+                name="ville"
+                id="ville"
+                placeholder="Ville du concert"
+              />
+
+              <label htmlFor="pays">Pays du concert</label>
+              <input
+                type="text"
+                name="pays"
+                id="pays"
+                placeholder="Pays du concert"
+              />
+
+              <label htmlFor="lieu">Lieu du concert</label>
+              <input
+                type="text"
+                name="lieu"
+                id="lieu"
+                placeholder="Lieu du concert"
+              />
+
+              <label htmlFor="complet">Le concert est-il pleint ?</label>
+              <input type="checkbox" name="complet" id="complet" />
+            </div>
+
+            <button>Ajouter</button>
+          </form>
+        </nav>
+
+        <ul className="date-list">
+          {getDates.map((date) => (
+            <li key={date.id}>
+              <div>
+                <form onSubmit={editDate}>
+                  <label htmlFor="editDate">Date</label>
+                  <input
+                    type="date"
+                    name="date"
+                    id="editDate"
+                    defaultValue={date.date}
+                  />
+
+                  <label htmlFor="editVille">Lieu du concert</label>
+                  <input
+                    type="text"
+                    name="ville"
+                    id="editVille"
+                    placeholder="Ville du concert"
+                    defaultValue={date.ville}
+                  />
+
+                  <label htmlFor="editPays">Pays du concert</label>
+                  <input
+                    type="text"
+                    name="editPays"
+                    id="editPays"
+                    placeholder="Pays du concert"
+                    defaultValue={date.pays}
+                  />
+
+                  <label htmlFor="editLieu">Lieu du concert</label>
+                  <input
+                    type="text"
+                    name="lieu"
+                    id="editLieu"
+                    placeholder="Lieu du concert"
+                    defaultValue={date.lieu}
+                  />
+
+                  <label htmlFor="editComplet">
+                    Le concert est-il pleint ?
+                  </label>
+                  <input
+                    type="checkbox"
+                    name="editComplet"
+                    id="editComplet"
+                    defaultValue={date.complet}
+                  />
+
+                  <input type="hidden" name="id" value={date.id} />
+
+                  <button className="btn btn-edit">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </button>
+                </form>
+                <button
+                  className="btn btn-remove"
+                  onClick={() => removeDate(date.id)}
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </main>
+      <Footer />
+    </>
   );
 };
 

@@ -1,0 +1,135 @@
+// COLORS
+
+$black: #000000;
+$dark-gray: #1b1b1b;
+$gray: #505050;
+$white: #ffffff;
+$blue: #00c2ff;
+$yellow: #aca140;
+
+.page-backoffice {
+    padding-inline: 4rem;
+
+    .addForms {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            background-color: $dark-gray;
+            padding: 2rem;
+
+            > div {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 2rem;
+
+                label {
+                    font-size: 1.6rem;
+                    text-transform: uppercase;
+                }
+
+                input {
+                    background-color: $gray;
+                    border: none;
+                    padding: 0.5rem;
+                    font-size: 1.6rem;
+                    color: $white;
+
+                    &::placeholder {
+                        color: #1f1f1f;
+                    }
+                }
+            }
+
+            button {
+                background-color: $blue;
+                width: fit-content;
+                padding: 1rem 2rem;
+                border: none;
+                cursor: pointer;
+                font-size: 1.6rem;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .date-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+        background-color: $dark-gray;
+        list-style: none;
+        width: 100%;
+        overflow-x: scroll;
+
+        .btn {
+            width: 4rem;
+            height: 4rem;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+            font-size: 1.6rem;
+        }
+
+        .btn-remove {
+            color: $black;
+            background-color: #ff0000;
+        }
+
+        li > div {
+            display: flex;
+            align-items: center;
+            padding-right: 2rem;
+            width: fit-content;
+            form {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 1%;
+
+                label {
+                    font-size: 1.6rem;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                }
+
+                input {
+                    background-color: $gray;
+                    border: none;
+                    padding: 1rem;
+                    font-size: 1.6rem;
+                    color: $white;
+
+                    &[type="date"] {
+                        width: 30rem;
+                    }
+
+                    &::placeholder {
+                        color: #1f1f1f;
+                    }
+                }
+
+                .btn-edit {
+                    color: $black;
+                    background-color: $yellow;
+                }
+            }
+        }
+    }
+}

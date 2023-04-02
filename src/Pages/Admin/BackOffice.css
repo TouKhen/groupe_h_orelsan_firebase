@@ -1,0 +1,117 @@
+.page-backoffice {
+  padding-inline: 4rem;
+}
+.page-backoffice .addForms {
+  display: flex;
+  flex-direction: column;
+}
+.page-backoffice .addForms p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.page-backoffice .addForms form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  background-color: #1b1b1b;
+  padding: 2rem;
+}
+.page-backoffice .addForms form > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.page-backoffice .addForms form > div label {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.page-backoffice .addForms form > div input {
+  background-color: #505050;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.page-backoffice .addForms form > div input::-moz-placeholder {
+  color: #1f1f1f;
+}
+.page-backoffice .addForms form > div input::placeholder {
+  color: #1f1f1f;
+}
+.page-backoffice .addForms form button {
+  background-color: #00c2ff;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.page-backoffice .date-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #1b1b1b;
+  list-style: none;
+  width: 100%;
+  overflow-x: scroll;
+}
+.page-backoffice .date-list .btn {
+  width: 4rem;
+  height: 4rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.page-backoffice .date-list .btn-remove {
+  color: #000000;
+  background-color: #ff0000;
+}
+.page-backoffice .date-list li > div {
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.page-backoffice .date-list li > div form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1%;
+}
+.page-backoffice .date-list li > div form label {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.page-backoffice .date-list li > div form input {
+  background-color: #505050;
+  border: none;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.page-backoffice .date-list li > div form input[type=date] {
+  width: 30rem;
+}
+.page-backoffice .date-list li > div form input::-moz-placeholder {
+  color: #1f1f1f;
+}
+.page-backoffice .date-list li > div form input::placeholder {
+  color: #1f1f1f;
+}
+.page-backoffice .date-list li > div form .btn-edit {
+  color: #000000;
+  background-color: #aca140;
+}/*# sourceMappingURL=BackOffice.css.map */
