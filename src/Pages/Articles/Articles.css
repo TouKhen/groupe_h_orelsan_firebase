@@ -1,0 +1,181 @@
+.page-articles {
+  padding-inline: 10rem;
+  margin-top: 7rem;
+}
+.page-articles .most-read {
+  display: flex;
+  justify-content: space-between;
+}
+.page-articles .most-read p {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.page-articles .most-read .main-article {
+  width: 60%;
+}
+.page-articles .most-read .main-article > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.page-articles .most-read .main-article > a > figure > div:first-child {
+  width: 100%;
+  overflow: hidden;
+}
+.page-articles .most-read .main-article > a > figure > div:first-child img {
+  width: 100%;
+}
+.page-articles .most-read .main-article > a > figure figcaption > div:first-child {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.page-articles .most-read .main-article > a > figure figcaption h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.page-articles .most-read .main-article > a > figure figcaption > p:last-child {
+  line-height: 178%;
+}
+.page-articles .most-read aside {
+  width: 38%;
+}
+.page-articles .most-read aside h2 {
+  font-size: 3.2rem;
+  font-weight: 400;
+  letter-spacing: 8.5%;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+}
+.page-articles .most-read aside > article a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.page-articles .most-read aside > article a > figure {
+  display: flex;
+  justify-content: space-between;
+}
+.page-articles .most-read aside > article a > figure:first-child {
+  margin-top: 2.3rem;
+  margin-bottom: 4rem;
+}
+.page-articles .most-read aside > article a > figure > div,
+.page-articles .most-read aside > article a > figure > figcaption {
+  width: 48%;
+}
+.page-articles .most-read aside > article a > figure > div {
+  overflow: hidden;
+}
+.page-articles .most-read aside > article a > figure > div img {
+  width: 100%;
+}
+.page-articles .big-article {
+  margin-top: 10rem;
+  margin-bottom: 8rem;
+}
+.page-articles .big-article a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.page-articles .big-article a figure {
+  display: flex;
+  justify-content: space-between;
+}
+.page-articles .big-article a figure > div,
+.page-articles .big-article a figure > figcaption {
+  width: 49%;
+}
+.page-articles .big-article a figure > div:first-child {
+  overflow: hidden;
+  border-radius: 2.4rem;
+}
+.page-articles .big-article a figure > div:first-child img {
+  width: 100%;
+}
+.page-articles .big-article a figure figcaption {
+  margin-top: 4rem;
+}
+.page-articles .big-article a figure figcaption > div:first-child {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.page-articles .big-article a figure figcaption > div:first-child p {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.page-articles .big-article a figure figcaption h3 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.page-articles .big-article a figure figcaption > p {
+  line-height: 152%;
+  letter-spacing: -2%;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.page-articles .big-article a figure figcaption > p:last-child {
+  margin-top: 4rem;
+}
+.page-articles .other-articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.page-articles .other-articles > article {
+  width: 49%;
+}
+.page-articles .other-articles > article a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.page-articles .other-articles > article a figure {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.page-articles .other-articles > article a figure > div,
+.page-articles .other-articles > article a figure > figcaption {
+  width: 100%;
+}
+.page-articles .other-articles > article a figure > div:first-child {
+  overflow: hidden;
+  max-height: 40rem;
+}
+.page-articles .other-articles > article a figure > div:first-child img {
+  width: 100%;
+}
+.page-articles .other-articles > article a figure figcaption > div:first-child {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.page-articles .other-articles > article a figure figcaption > div:first-child p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 8.5%;
+}
+.page-articles .other-articles > article a figure figcaption h3 {
+  letter-spacing: -5%;
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0.7rem;
+  margin-bottom: 3.5rem;
+}
+.page-articles .other-articles > article a figure figcaption > p {
+  letter-spacing: -5%;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.page-articles .other-articles > article a figure figcaption > p:last-child {
+  margin-top: 4rem;
+}/*# sourceMappingURL=Articles.css.map */

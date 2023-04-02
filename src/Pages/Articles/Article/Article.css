@@ -1,0 +1,62 @@
+.page-article {
+  margin-top: 6rem;
+  padding-inline: 10rem;
+  margin-bottom: 6rem;
+}
+.page-article figure {
+  display: flex;
+  justify-content: space-between;
+}
+.page-article figure > div,
+.page-article figure > figcaption {
+  width: 49%;
+}
+.page-article figure > div:first-child {
+  overflow: hidden;
+  border-radius: 2.4rem;
+}
+.page-article figure > div:first-child img {
+  width: 100%;
+}
+.page-article figure .img-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+.page-article figure .img-group > div {
+  width: 49%;
+}
+.page-article figure .img-group > div img {
+  width: 100%;
+}
+.page-article figure figcaption {
+  margin-top: 4rem;
+}
+.page-article figure figcaption > div:first-child {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.page-article figure figcaption > div:first-child p {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.page-article figure figcaption h3 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.page-article figure figcaption > p {
+  line-height: 185%;
+  letter-spacing: -2%;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.page-article figure figcaption > p:last-child {
+  margin-top: 4rem;
+}/*# sourceMappingURL=Article.css.map */
