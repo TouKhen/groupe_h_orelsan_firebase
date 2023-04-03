@@ -78,6 +78,10 @@
 
                 &:last-child ul {
                     flex-wrap: wrap;
+
+                    li {
+                        text-align: center;
+                    }
                 }
             }
         }

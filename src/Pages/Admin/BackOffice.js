@@ -9,7 +9,7 @@ import Overlay from "../../Components/Overlay";
 const BackOffice = () => {
   // check if user is connected else redirect to login page
   if (localStorage.getItem("UserCreds") === null) {
-    window.location.href = "/login";
+    window.location.href = "/admin/login";
   }
   let dates = [];
   const [getDates, setDates] = useState(dates);

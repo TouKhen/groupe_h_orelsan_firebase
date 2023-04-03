@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer";
 import Nav from "../../Components/Nav";
 import "./Shop.css";
+import mugciv from "../../assets/img/merch/mugblancciv.png";
+import casquettenoire from "../../assets/img/merch/casquettenoire.png";
+import casquetteblanche from "../../assets/img/merch/casquetteblanche.png";
+import muglogo from "../../assets/img/merch/muglogo.png";
 import whiteLogo from "../../assets/img/logo/logo_white_small.svg";
 import wtshirt from "../../assets/img/merch/tshirt_blanc.png";
 import ntshirt from "../../assets/img/merch/tshirt_noir.png";
@@ -46,27 +50,32 @@ const Shop = () => {
         </section>
 
         <section className="page-shop-carousel">
-          <div className="page-shop-carousel-btns">
-            <button>
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button>
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-          </div>
-
           <div className="carousel-item-container">
             <figure className="carousel-item">
-              <img src="" />
+              <Link to="#">
+                <img src={mugciv} alt="Mug avec civilsation écrit dessus" />
+              </Link>
             </figure>
             <figure className="carousel-item">
-              <img src="" />
+              <Link to="#">
+                <img
+                  src={casquettenoire}
+                  alt="Casquette noire avec logo d'Orelsan"
+                />
+              </Link>
             </figure>
             <figure className="carousel-item">
-              <img src="" />
+              <Link to="#">
+                <img
+                  src={casquetteblanche}
+                  alt="Casquette blanche avec logo d'Orelsan"
+                />
+              </Link>
             </figure>
             <figure className="carousel-item">
-              <img src="" />
+              <Link to="#">
+                <img src={muglogo} alt="Mug avec logo d'Orelsan" />
+              </Link>
             </figure>
           </div>
         </section>

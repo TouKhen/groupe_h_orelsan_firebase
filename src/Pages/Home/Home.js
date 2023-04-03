@@ -55,10 +55,48 @@ const Home = () => {
       </section>
 
       <main>
-        <article className="tournees">
+        <article className="album">
           <h1>
-            <img src={logoblanc} alt="Logo blanc de la tournée d'Orelsan" />
+            Nouvel Album <span>Civilisation Edition Ultime</span>
           </h1>
+          <div>
+            <img
+              src={logo}
+              alt="Disque du nouvel album Civilisation Edition Ultime"
+            />
+            <ul>
+              <li>CP_001_ Intro Civilisation Perdue</li>
+              <li>CP_002_ Les aventures de MiniSan</li>
+              <li>CP_003_ Toujours perdu quand même</li>
+              <li>CP_004_ Juste un dernier</li>
+              <li>CP_005_ Ok... Super...</li>
+              <li>CP_006_ Ah la France</li>
+              <li>CP_007_ Point de rupture</li>
+              <li>CP_008_ Nous contre le monde</li>
+              <li>CP_009_ Évidemment</li>
+              <li>CP_010_ On a gagné</li>
+              <li>Shonen</li>
+              <li>La Quête</li>
+              <li>Du propre</li>
+              <li>Bébéboa</li>
+              <li>Rêve mieux</li>
+              <li>Seul avec du monde autour</li>
+              <li>Manifeste</li>
+              <li>L'odeur de l'essence</li>
+              <li>Jour meilleur</li>
+              <li>Baise le monde</li>
+              <li>Casseurs Flowters Infinity</li>
+              <li>Dernier verre</li>
+              <li>Ensemble</li>
+              <li>Athéna</li>
+              <li>Civilisation</li>
+            </ul>
+          </div>
+        </article>
+        <article className="tournees">
+          <h2>
+            <img src={logoblanc} alt="Logo blanc de la tournée d'Orelsan" />
+          </h2>
 
           <ul className="date-list">
             {getDates.map((date) => (

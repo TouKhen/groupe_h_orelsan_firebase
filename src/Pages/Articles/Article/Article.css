@@ -59,4 +59,17 @@
 }
 .page-article figure figcaption > p:last-child {
   margin-top: 4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-article {
+    padding-inline: 3rem !important;
+  }
+  .page-article figure {
+    flex-direction: column;
+  }
+  .page-article figure > div,
+  .page-article figure > figcaption {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=Article.css.map */

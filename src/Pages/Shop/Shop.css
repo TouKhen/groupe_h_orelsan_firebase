@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   padding: 2.5rem;
-  background-color: #505050;
+  background-color: #ffffff;
 }
 .page-shop-new p,
 .page-shop-new h1,
@@ -89,7 +89,15 @@
   display: flex;
   width: 100%;
   gap: 5rem;
-  overflow-x: hidden;
+  padding: 2rem 6rem;
+  overflow-x: scroll;
+}
+.page-shop-carousel .carousel-item-container::-webkit-scrollbar {
+  background-color: transparent;
+  height: 1rem;
+}
+.page-shop-carousel .carousel-item-container::-webkit-scrollbar-thumb {
+  background: #505050;
 }
 .page-shop-carousel .carousel-item-container .carousel-item img {
   width: 40rem;
@@ -164,4 +172,11 @@
   font-weight: 600;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-shop-exclus,
+  .page-shop-collection {
+    padding-inline: 3rem !important;
+  }
 }/*# sourceMappingURL=Shop.css.map */

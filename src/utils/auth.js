@@ -67,7 +67,7 @@ const authService = {
               const user = userCredential.user;
               resolve({ data: user });
               console.log("logged in");
-              window.location.href = "/backoffice";
+              window.location.href = "/admin/backoffice";
             })
             .catch((error) => {
               let frenchMessage;

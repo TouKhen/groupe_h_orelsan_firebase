@@ -47,7 +47,7 @@ $yellow: #aca140;
     align-items: center;
     justify-content: center;
     padding: 2.5rem;
-    background-color: $gray;
+    background-color: $white;
 
     p,
     h1,
@@ -108,7 +108,16 @@ $yellow: #aca140;
         display: flex;
         width: 100%;
         gap: 5rem;
-        overflow-x: hidden;
+        padding: 2rem 6rem;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            height: 1rem;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $gray;
+        }
 
         .carousel-item img {
             width: 40rem;
@@ -196,5 +205,12 @@ $yellow: #aca140;
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .page-shop-exclus,
+    .page-shop-collection {
+        padding-inline: 3rem !important;
     }
 }

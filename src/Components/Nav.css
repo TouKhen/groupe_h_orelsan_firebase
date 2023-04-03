@@ -54,6 +54,7 @@
     flex-direction: column !important;
     padding: 6rem;
     align-items: flex-end;
+    text-align: right;
   }
   .main-header .navbar.close {
     transform: translateY(-100%);
