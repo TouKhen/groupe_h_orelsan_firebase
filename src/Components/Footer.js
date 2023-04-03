@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "./logo_orelsan.svg";
+import logo from "../assets/img/logo/logo_orelsan.svg";
 import "./Footer.css";
 
 const Footer = () => {

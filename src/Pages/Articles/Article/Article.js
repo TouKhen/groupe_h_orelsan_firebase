@@ -2,9 +2,9 @@ import "./Article.css";
 import Footer from "../../../Components/Footer";
 import Nav from "../../../Components/Nav";
 import Overlay from "../../../Components/Overlay";
-import img1 from "../../../img/article/Rectangle 26.png";
-import img2 from "../../../img/article/Rectangle 27.png";
-import img3 from "../../../img/article/Rectangle 29.png";
+import img1 from "../../../assets/img/article/Rectangle 26.png";
+import img2 from "../../../assets/img/article/Rectangle 27.png";
+import img3 from "../../../assets/img/article/Rectangle 29.png";
 
 const Article = () => {
   return (

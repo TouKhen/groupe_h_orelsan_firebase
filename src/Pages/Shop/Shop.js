@@ -2,17 +2,19 @@ import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer";
 import Nav from "../../Components/Nav";
 import "./Shop.css";
-import whiteLogo from "../../img/logo/logo_white_small.svg";
-import wtshirt from "../../img/merch/tshirt_blanc.png";
-import ntshirt from "../../img/merch/tshirt_noir.png";
-import duomug from "../../img/merch/duo_mug.png";
-import mugn from "../../img/merch/mug_noir.png";
-import bob from "../../img/merch/bob.png";
+import whiteLogo from "../../assets/img/logo/logo_white_small.svg";
+import wtshirt from "../../assets/img/merch/tshirt_blanc.png";
+import ntshirt from "../../assets/img/merch/tshirt_noir.png";
+import duomug from "../../assets/img/merch/duo_mug.png";
+import mugn from "../../assets/img/merch/mug_noir.png";
+import bob from "../../assets/img/merch/bob.png";
+import Overlay from "../../Components/Overlay";
 
 const Shop = () => {
   return (
     <>
       <Nav />
+      <Overlay />
       <main className="page-shop">
         <section className="page-shop-tips">
           <p>
@@ -124,7 +126,7 @@ const Shop = () => {
                 <div>
                   <img
                     src={bob}
-                    alt="t-shirt noir avec le logo d'Orelsan dessus"
+                    alt="Femme qui port un bob avec le logo d'Orelsan dessus'"
                   />
                 </div>
                 <figcaption>
@@ -143,7 +145,7 @@ const Shop = () => {
                 <div>
                   <img
                     src={duomug}
-                    alt="t-shirt blanc avec le logo d'Orelsan dessus"
+                    alt="Deux mug avec le logo d'Orelsan dessus qui se collent"
                   />
                 </div>
                 <figcaption>
@@ -162,7 +164,7 @@ const Shop = () => {
                 <div>
                   <img
                     src={mugn}
-                    alt="t-shirt blanc avec le logo d'Orelsan dessus"
+                    alt="Mug noir avec le logo en blanc d'Orelsan dessus"
                   />
                 </div>
                 <figcaption>

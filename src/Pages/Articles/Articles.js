@@ -1,11 +1,11 @@
 import "./Articles.css";
 import Footer from "../../Components/Footer";
 import Nav from "../../Components/Nav";
-import img1 from "../../img/thumbnails/Rectangle 23.png";
-import img2 from "../../img/thumbnails/Rectangle 25.png";
-import img3 from "../../img/thumbnails/Rectangle 26.png";
-import img4 from "../../img/thumbnails/Rectangle 27.png";
-import img5 from "../../img/thumbnails/Rectangle 28.png";
+import img1 from "../../assets/img/thumbnails/Rectangle 23.png";
+import img2 from "../../assets/img/thumbnails/Rectangle 25.png";
+import img3 from "../../assets/img/thumbnails/Rectangle 26.png";
+import img4 from "../../assets/img/thumbnails/Rectangle 27.png";
+import img5 from "../../assets/img/thumbnails/Rectangle 28.png";
 import Overlay from "../../Components/Overlay";
 import { Link } from "react-router-dom";
 

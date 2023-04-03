@@ -224,3 +224,28 @@ $yellow: #aca140;
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .page-articles {
+        padding-inline: 3rem;
+        .most-read {
+            flex-direction: column;
+
+            article,
+            aside {
+                width: 100% !important;
+            }
+        }
+
+        .big-article {
+            figure {
+                flex-direction: column;
+
+                > div,
+                > figcaption {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}

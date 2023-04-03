@@ -40,11 +40,12 @@ const BackOffice = () => {
 
   const addDate = (event) => {
     event.preventDefault();
-    let date = event.target.children.date.value;
-    let ville = event.target.children.ville.value;
-    let pays = event.target.children.pays.value;
-    let lieu = event.target.children.lieu.value;
-    let complet = event.target.children.complet.value;
+
+    let date = event.target.date.value;
+    let ville = event.target.ville.value;
+    let pays = event.target.pays.value;
+    let lieu = event.target.lieu.value;
+    let complet = event.target.complet.checked;
 
     const data = {
       date: date,
@@ -65,12 +66,14 @@ const BackOffice = () => {
 
   const editDate = (event) => {
     event.preventDefault();
-    let id = event.target.children.id.value;
-    let date = event.target.children.date.value;
-    let ville = event.target.children.ville.value;
-    let pays = event.target.children.pays.value;
-    let lieu = event.target.children.lieu.value;
-    let complet = event.target.children.complet.value;
+    let id = event.target.id.value;
+    let date = event.target.editDate.value;
+    let ville = event.target.editVille.value;
+    let pays = event.target.editPays.value;
+    let lieu = event.target.editLieu.value;
+    let complet = event.target.editComplet.checked;
+
+    console.log(event.target.editComplet);
 
     const data = {
       date: date,
@@ -214,7 +217,7 @@ const BackOffice = () => {
                     type="checkbox"
                     name="editComplet"
                     id="editComplet"
-                    defaultValue={date.complet}
+                    defaultChecked={date.complet}
                   />
 
                   <input type="hidden" name="id" value={date.id} />

@@ -10,6 +10,10 @@ $yellow: #aca140;
 .main-header {
     display: flex;
 
+    button {
+        display: none;
+    }
+
     .navbar {
         width: 100%;
         ul {
@@ -32,6 +36,41 @@ $yellow: #aca140;
                         width: 15rem;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999999;
+        width: 100%;
+        background-color: transparent;
+
+        button {
+            display: inline-block;
+            color: $black;
+            background-color: $blue;
+            padding: 2rem;
+            font-size: 3rem;
+            width: 9rem;
+            height: 9rem;
+            border: none;
+        }
+        .navbar {
+            transition: transform 0.4s ease;
+            background-color: $black;
+            ul {
+                flex-direction: column !important;
+                padding: 6rem;
+                align-items: flex-end;
+            }
+
+            &.close {
+                transform: translateY(-100%);
             }
         }
     }

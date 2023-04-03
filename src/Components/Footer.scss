@@ -61,3 +61,25 @@
         margin-top: 7rem;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .page-footer {
+        > div:first-child {
+            flex-direction: column;
+
+            > div {
+                width: 100% !important;
+                border: none !important;
+
+                &:first-child {
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                &:last-child ul {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}

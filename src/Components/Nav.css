@@ -1,6 +1,9 @@
 .main-header {
   display: flex;
 }
+.main-header button {
+  display: none;
+}
 .main-header .navbar {
   width: 100%;
 }
@@ -22,4 +25,37 @@
 }
 .main-header .navbar ul li a img {
   width: 15rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    width: 100%;
+    background-color: transparent;
+  }
+  .main-header button {
+    display: inline-block;
+    color: #000000;
+    background-color: #00c2ff;
+    padding: 2rem;
+    font-size: 3rem;
+    width: 9rem;
+    height: 9rem;
+    border: none;
+  }
+  .main-header .navbar {
+    transition: transform 0.4s ease;
+    background-color: #000000;
+  }
+  .main-header .navbar ul {
+    flex-direction: column !important;
+    padding: 6rem;
+    align-items: flex-end;
+  }
+  .main-header .navbar.close {
+    transform: translateY(-100%);
+  }
 }/*# sourceMappingURL=Nav.css.map */

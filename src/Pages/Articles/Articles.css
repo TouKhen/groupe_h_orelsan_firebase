@@ -178,4 +178,24 @@
 }
 .page-articles .other-articles > article a figure figcaption > p:last-child {
   margin-top: 4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-articles {
+    padding-inline: 3rem;
+  }
+  .page-articles .most-read {
+    flex-direction: column;
+  }
+  .page-articles .most-read article,
+  .page-articles .most-read aside {
+    width: 100% !important;
+  }
+  .page-articles .big-article figure {
+    flex-direction: column;
+  }
+  .page-articles .big-article figure > div,
+  .page-articles .big-article figure > figcaption {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=Articles.css.map */

@@ -49,4 +49,21 @@
   text-align: center;
   font-size: 2.4rem;
   margin-top: 7rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-footer > div:first-child {
+    flex-direction: column;
+  }
+  .page-footer > div:first-child > div {
+    width: 100% !important;
+    border: none !important;
+  }
+  .page-footer > div:first-child > div:first-child {
+    justify-content: center;
+    align-items: center;
+  }
+  .page-footer > div:first-child > div:last-child ul {
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=Footer.css.map */

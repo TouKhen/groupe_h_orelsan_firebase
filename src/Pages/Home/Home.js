@@ -3,8 +3,9 @@ import databaseService from "../../utils/database";
 import Nav from "../../Components/Nav";
 import Overlay from "../../Components/Overlay";
 import "./Home.css";
-import video from "./video.mp4";
-import logo from "./logo_orelsan.svg";
+import logo from "../../assets/img/logo/logo_orelsan.svg";
+import logoblanc from "../../assets/img/logo/logo_orelsan_tour_blanc.png";
+import video from "../../assets/video/video.mp4";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer";
 
@@ -12,7 +13,6 @@ const Home = () => {
   let dates = [],
     tracks_array = [];
   const [getDates, setDates] = useState(dates);
-  const [getTracks, setTracks] = useState(tracks_array);
 
   useEffect(() => {
     databaseService.readData("dates/", (data) => {
@@ -57,8 +57,7 @@ const Home = () => {
       <main>
         <article className="tournees">
           <h1>
-            <span>Tournée 2023</span>
-            <br /> <span>Orelsan Tour</span>
+            <img src={logoblanc} alt="Logo blanc de la tournée d'Orelsan" />
           </h1>
 
           <ul className="date-list">
@@ -66,12 +65,13 @@ const Home = () => {
               <li key={date.id}>
                 <span className="date">{date.date}</span>{" "}
                 <span className="ville">{date.ville}</span>
+                <span className="pays">{date.pays}</span>
                 <span className="img">
-                  <img src={logo} />
+                  <img src={logo} alt="Logo Orelsan jaune" />
                 </span>
                 <span className="lieu">{date.lieu}</span>
-                <span className="lien">
-                  <Link to="#">Réserver</Link>
+                <span className={!date.complet ? "lien" : "lien complet"}>
+                  <Link to="#">{!date.complet ? "Réserver" : "Sold out!"}</Link>
                 </span>
               </li>
             ))}
