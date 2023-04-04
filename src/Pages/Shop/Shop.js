@@ -89,10 +89,12 @@ const Shop = () => {
           <section className="item-list">
             <figure className="item">
               <Link to="#">
-                <img
-                  src={ntshirt}
-                  alt="t-shirt noir avec le logo d'Orelsan dessus"
-                />
+                <div>
+                  <img
+                    src={ntshirt}
+                    alt="t-shirt noir avec le logo d'Orelsan dessus"
+                  />
+                </div>
                 <figcaption>
                   <p>
                     T-shirtXXX
@@ -106,10 +108,12 @@ const Shop = () => {
 
             <figure className="item">
               <Link to="#">
-                <img
-                  src={wtshirt}
-                  alt="t-shirt blanc avec le logo d'Orelsan dessus"
-                />
+                <div>
+                  <img
+                    src={wtshirt}
+                    alt="t-shirt blanc avec le logo d'Orelsan dessus"
+                  />
+                </div>
                 <figcaption>
                   <p>
                     T-shirtXXX
@@ -135,7 +139,7 @@ const Shop = () => {
                 <div>
                   <img
                     src={bob}
-                    alt="Femme qui port un bob avec le logo d'Orelsan dessus'"
+                    alt="Femme qui porte un bob avec le logo d'Orelsan dessus'"
                   />
                 </div>
                 <figcaption>

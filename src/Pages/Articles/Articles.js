@@ -86,12 +86,14 @@ const Articles = () => {
                   <p>PAR TESSA </p>
                   <p>00/00/1000</p>
                 </div>
-                <h3>7 dates tant attendues en France</h3>
+                <h3>Seul avec du monde autour</h3>
                 <p>
-                  C’est à la fin du printemps et aux prémices de l’été que se
-                  déroulera la tournée française d’Orelsan avec son album
-                  civilisation, mais avant de vous dévoiler les dates, revenons
-                  sur cet album.
+                  <strong>
+                    C’est à la fin du printemps et aux prémices de l’été que se
+                    déroulera la tournée française d’Orelsan avec son album
+                    civilisation, mais avant de vous dévoiler les dates,
+                    revenons sur cet album.
+                  </strong>
                   <br /> L'album "Civilisation" d'Orelsan, sorti en 2021, a
                   connu un grand succès auprès du public et de la critique. Avec
                   cet album, l'artiste normand livre une vision sombre et

@@ -10,6 +10,9 @@ const BackOffice = () => {
   // check if user is connected else redirect to login page
   if (localStorage.getItem("UserCreds") === null) {
     window.location.href = "/admin/login";
+  } else {
+    const id = localStorage.getItem("UserCreds");
+    // authService.verifiyUserRole(id);
   }
   let dates = [];
   const [getDates, setDates] = useState(dates);
@@ -32,6 +35,10 @@ const BackOffice = () => {
             complet: Object.values(data)[i].complet,
           });
         }
+
+        dateArray.sort(function (a, b) {
+          return new Date(a.date) - new Date(b.date);
+        });
 
         setDates(Object.values(dateArray));
       }
@@ -56,6 +63,7 @@ const BackOffice = () => {
     };
 
     if (date !== "" && ville !== "") {
+      console.log(data);
       databaseService.pushData("dates/", data);
     }
   };
@@ -90,11 +98,11 @@ const BackOffice = () => {
 
   const addUser = (event) => {
     event.preventDefault();
-    let email = event.target.children.email.value;
-    let pwd = event.target.children.pwd.value;
+    let email = event.target.email.value;
+    let pwd = event.target.pwd.value;
 
     if (pwd.length > 6) {
-      authService.signUp(email, pwd);
+      authService.signUp(email, pwd, true);
       event.target.reset();
     } else {
       setPwdErrors(
@@ -223,14 +231,14 @@ const BackOffice = () => {
                   <input type="hidden" name="id" value={date.id} />
 
                   <button className="btn btn-edit">
-                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i className="fa-solid fa-pen-to-square"></i>
                   </button>
                 </form>
                 <button
                   className="btn btn-remove"
                   onClick={() => removeDate(date.id)}
                 >
-                  <i class="fa-solid fa-trash"></i>
+                  <i className="fa-solid fa-trash"></i>
                 </button>
               </div>
             </li>

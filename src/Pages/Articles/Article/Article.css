@@ -18,6 +18,23 @@
 .page-article figure > div:first-child img {
   width: 100%;
 }
+.page-article figure a {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #00c2ff;
+  color: #000000;
+  padding: 1rem 2rem;
+  border-radius: 2.4rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  transition: all 0.2s ease;
+}
+.page-article figure a:hover {
+  background-color: #aca140;
+}
 .page-article figure .img-group {
   display: flex;
   flex-wrap: wrap;
@@ -32,6 +49,8 @@
 }
 .page-article figure figcaption {
   margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
 }
 .page-article figure figcaption > div:first-child {
   margin-top: 0.8rem;

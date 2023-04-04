@@ -6,6 +6,7 @@ import "./Home.css";
 import logo from "../../assets/img/logo/logo_orelsan.svg";
 import logoblanc from "../../assets/img/logo/logo_orelsan_tour_blanc.png";
 import video from "../../assets/video/video.mp4";
+import coveretcd from "../../assets/img/merch/coveretcd.png";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer";
 
@@ -31,6 +32,10 @@ const Home = () => {
             complet: Object.values(data)[i].complet,
           });
         }
+
+        dateArray.sort(function (a, b) {
+          return new Date(a.date) - new Date(b.date);
+        });
 
         setDates(Object.values(dateArray));
       }
@@ -61,7 +66,7 @@ const Home = () => {
           </h1>
           <div>
             <img
-              src={logo}
+              src={coveretcd}
               alt="Disque du nouvel album Civilisation Edition Ultime"
             />
             <ul>
@@ -92,6 +97,9 @@ const Home = () => {
               <li>Civilisation</li>
             </ul>
           </div>
+          <Link className="btn btn-buy" to="/shop">
+            Acheter
+          </Link>
         </article>
         <article className="tournees">
           <h2>

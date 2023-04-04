@@ -10,6 +10,7 @@ $yellow: #aca140;
 .video-container {
     width: 100%;
     position: relative;
+    display: flex;
     .filter {
         position: absolute;
         z-index: 10;
@@ -36,6 +37,9 @@ $yellow: #aca140;
 
 main {
     .album {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-block: 4rem;
         padding-inline: 8rem;
         h1 {
@@ -51,9 +55,16 @@ main {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
+            margin-top: 2rem;
             img,
             ul {
                 width: 49%;
+            }
+
+            img {
+                background: linear-gradient(0deg, #858585, white);
+                margin-bottom: 2rem;
             }
 
             ul {
@@ -66,9 +77,27 @@ main {
                 }
             }
         }
+
+        .btn-buy {
+            margin-top: 2rem;
+            background-color: $blue;
+            color: $black;
+            padding: 1rem 2rem;
+            font-size: 2.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 4rem;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background-color: $yellow;
+            }
+        }
     }
 
     .tournees {
+        margin-top: 10rem;
         h2 {
             text-align: center;
             margin-top: 3rem;
@@ -124,10 +153,15 @@ main {
                             color: $black;
                             padding: 0.5rem 1.6rem;
                             font-size: 2.4rem;
-                            font-weight: 400;
+                            font-weight: 600;
                             text-decoration: none;
                             text-transform: uppercase;
                             border-radius: 2.6rem;
+                            transition: all 0.2s ease;
+
+                            &:hover {
+                                background-color: $yellow;
+                            }
                         }
 
                         &.complet a {
@@ -171,6 +205,7 @@ main {
 @media screen and (max-width: 1024px) {
     .video-container {
         overflow-x: hidden;
+        justify-content: center;
         video {
             height: auto;
             width: auto;
@@ -188,6 +223,10 @@ main {
             img,
             ul {
                 width: 100% !important;
+            }
+
+            ul {
+                margin-left: 2rem;
             }
         }
     }

@@ -17,7 +17,7 @@ const Footer = () => {
               <Link to="#">Albums</Link>
             </li>
             <li>
-              <Link to="#">Vidéos</Link>
+              <Link to="/articles">Articles</Link>
             </li>
             <li>
               <Link to="/shop">Shop</Link>
@@ -29,32 +29,32 @@ const Footer = () => {
           <ul>
             <li>
               <Link to="#">
-                <i class="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-instagram"></i>
               </Link>
             </li>
             <li>
               <Link to="#">
-                <i class="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-twitter"></i>
               </Link>
             </li>
             <li>
               <Link to="#">
-                <i class="fa-brands fa-youtube"></i>
+                <i className="fa-brands fa-youtube"></i>
               </Link>
             </li>
             <li>
               <Link to="#">
-                <i class="fa-brands fa-itunes"></i>
+                <i className="fa-brands fa-itunes"></i>
               </Link>
             </li>
             <li>
               <Link to="#">
-                <i class="fa-brands fa-facebook"></i>
+                <i className="fa-brands fa-facebook"></i>
               </Link>
             </li>
             <li>
               <Link to="#">
-                <i class="fa-brands fa-spotify"></i>
+                <i className="fa-brands fa-spotify"></i>
               </Link>
             </li>
           </ul>

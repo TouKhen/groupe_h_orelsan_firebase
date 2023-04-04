@@ -28,6 +28,24 @@ $yellow: #aca140;
             }
         }
 
+        a {
+            display: inline-block;
+            font-size: 2.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: $blue;
+            color: $black;
+            padding: 1rem 2rem;
+            border-radius: 2.4rem;
+            margin: 0 auto;
+            margin-top: 4rem;
+            transition: all 0.2s ease;
+            &:hover {
+                background-color: $yellow;
+            }
+        }
+
         .img-group {
             display: flex;
             flex-wrap: wrap;
@@ -45,6 +63,8 @@ $yellow: #aca140;
 
         figcaption {
             margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
             > div:first-child {
                 margin-top: 0.8rem;
                 display: flex;

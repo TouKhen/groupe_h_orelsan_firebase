@@ -1,3 +1,5 @@
+import _ from "./init";
+
 import {
   getAuth,
   setPersistence,
@@ -25,13 +27,14 @@ const authService = {
     const auth = getAuth();
     onAuthStateChanged(auth, callback);
   },
-  signUp(email, pwd) {
+  signUp(email, pwd, admin) {
     return new Promise((resolve) => {
       const auth = getAuth();
       createUserWithEmailAndPassword(auth, email, pwd)
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
+
           resolve({ data: user });
         })
         .catch((error) => {

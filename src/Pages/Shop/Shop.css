@@ -27,6 +27,10 @@
 }
 .page-shop-tips a {
   margin-left: 1rem;
+  transition: all 0.2s ease;
+}
+.page-shop-tips a:hover {
+  color: #aca140;
 }
 
 .page-shop-new {
@@ -66,6 +70,10 @@
   text-decoration: none;
   padding-inline: 3.4rem;
   margin-top: 2.4rem;
+  transition: all 0.2s ease;
+}
+.page-shop-new a:hover {
+  background-color: #aca140;
 }
 
 .page-shop-sections {
@@ -83,6 +91,10 @@
   font-size: 3.2rem;
   color: #ffffff;
   text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+.page-shop-sections ul a:hover {
+  color: #aca140;
 }
 
 .page-shop-carousel .carousel-item-container {
@@ -123,6 +135,7 @@
   text-decoration: none;
 }
 .page-shop-exclus .item-list .item img {
+  height: 100%;
   width: 100%;
 }
 .page-shop-exclus .item-list .item figcaption {
@@ -174,9 +187,41 @@
   color: #ffffff;
 }
 
+.item div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden !important;
+  width: 100%;
+  height: 30rem;
+}
+.item div img {
+  transition: all 0.5s ease;
+}
+.item div img:hover {
+  width: 110% !important;
+  height: 110% !important;
+}
+
 @media screen and (max-width: 1024px) {
+  .page-shop-new h1 {
+    font-size: 4rem;
+  }
+  .page-shop-sections ul {
+    flex-wrap: wrap;
+  }
+  .page-shop-carousel .carousel-item-container {
+    padding-inline: 3rem;
+  }
   .page-shop-exclus,
   .page-shop-collection {
     padding-inline: 3rem !important;
+  }
+  .page-shop-exclus .item-list,
+  .page-shop-collection .item-list {
+    padding-inline: 0rem;
+  }
+  .page-shop-collection .item-list .item {
+    width: 100% !important;
   }
 }/*# sourceMappingURL=Shop.css.map */

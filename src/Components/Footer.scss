@@ -1,3 +1,12 @@
+// COLORS
+
+$black: #000000;
+$dark-gray: #1b1b1b;
+$gray: #505050;
+$white: #ffffff;
+$blue: #00c2ff;
+$yellow: #aca140;
+
 .page-footer {
     margin-top: 12rem;
     padding-bottom: 4rem;
@@ -9,7 +18,7 @@
             display: flex;
             align-items: center;
             width: 40%;
-            border-right: 2px solid #a19d59;
+            border-right: 2px solid $yellow;
             a {
                 width: 60%;
 
@@ -33,16 +42,26 @@
                 &:first-child {
                     margin-bottom: 4rem;
                     li a {
-                        color: #fff;
+                        color: $white;
                         font-size: 2.4rem;
                         text-transform: uppercase;
+                        transition: all 0.2s ease;
+
+                        &:hover {
+                            color: $yellow;
+                        }
                     }
                 }
 
                 &:last-child {
                     li a {
-                        color: #a19d59;
+                        color: $yellow;
                         font-size: 5.4rem;
+                        transition: all 0.2s ease;
+
+                        &:hover {
+                            color: $blue;
+                        }
                     }
                 }
 

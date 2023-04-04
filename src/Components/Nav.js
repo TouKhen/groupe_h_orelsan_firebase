@@ -44,7 +44,7 @@ const Nav = () => {
       </nav>
 
       <button className="btn btn-open-nav" onClick={openNav}>
-        <i class={btnNavClasses}></i>
+        <i className={btnNavClasses}></i>
       </button>
     </header>
   );

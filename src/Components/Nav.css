@@ -22,6 +22,10 @@
   text-decoration: none;
   font-weight: 400;
   text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+.main-header .navbar ul li a:hover {
+  color: #aca140;
 }
 .main-header .navbar ul li a img {
   width: 15rem;
