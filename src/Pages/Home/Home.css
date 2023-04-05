@@ -153,15 +153,22 @@ main .actus .articles-list {
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10rem;
   padding-inline: 8rem;
   padding-block: 8rem;
 }
-main .actus .articles-list article {
+main .actus .articles-list article div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 38rem;
   height: 38rem;
-  background-color: #444444;
+  overflow: hidden;
+}
+main .actus .articles-list article div img {
+  width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -215,7 +222,7 @@ main .actus .articles-list article {
     align-items: center;
     padding-inline: 3rem !important;
   }
-  .actus .articles-list article {
+  .actus .articles-list div {
     width: 100% !important;
   }
 }/*# sourceMappingURL=Home.css.map */

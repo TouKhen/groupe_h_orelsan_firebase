@@ -7,6 +7,9 @@ import logo from "../../assets/img/logo/logo_orelsan.svg";
 import logoblanc from "../../assets/img/logo/logo_orelsan_tour_blanc.png";
 import video from "../../assets/video/video.mp4";
 import coveretcd from "../../assets/img/merch/coveretcd.png";
+import actu1 from "../../assets/img/thumbnails/Rectangle 8.png";
+import actu2 from "../../assets/img/thumbnails/Rectangle 9.png";
+import actu3 from "../../assets/img/thumbnails/Rectangle 10.png";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer";
 
@@ -129,13 +132,25 @@ const Home = () => {
 
           <section className="articles-list">
             <article>
-              <Link to=""></Link>
+              <Link to="">
+                <div>
+                  <img src={actu1} />
+                </div>
+              </Link>
             </article>
             <article>
-              <Link to=""></Link>
+              <Link to="">
+                <div>
+                  <img src={actu2} />
+                </div>
+              </Link>
             </article>
             <article>
-              <Link to=""></Link>
+              <Link to="">
+                <div>
+                  <img src={actu3} />
+                </div>
+              </Link>
             </article>
           </section>
         </article>
